@@ -1,0 +1,167 @@
+{
+  "atlas": {
+    "name": "Atlas",
+    "emoji": "🌍",
+    "status": "online",
+    "mode": "main orchestrator",
+    "timezone": "Europe/Stockholm",
+    "notes": "Running inside OpenClaw on Rayan's machine. Orchestrating a small fleet of agents."
+  },
+  "tasks": {
+    "inbox": [
+      {
+        "id": "t-ideas-1",
+        "title": "Design reusable app template workflow (idea → repo → deploy)",
+        "type": "feature",
+        "priority": "medium"
+      },
+      {
+        "id": "t-ideas-2",
+        "title": "Implement PersonaPlex-style multi-persona system for Atlas",
+        "type": "feature",
+        "priority": "medium"
+      }
+    ],
+    "doing": [
+      {
+        "id": "t-dashboard-1",
+        "title": "Maintain Atlas dashboard (status, tasks, agents, issues)",
+        "type": "chore",
+        "priority": "high"
+      }
+    ],
+    "done": [
+      {
+        "id": "t-app-1",
+        "title": "Click counter app (GitHub Pages)",
+        "type": "feature",
+        "priority": "low"
+      },
+      {
+        "id": "t-app-2",
+        "title": "Gradient calculator app (GitHub Pages)",
+        "type": "feature",
+        "priority": "medium"
+      },
+      {
+        "id": "t-app-3",
+        "title": "Stand-up reminder app with interval testing",
+        "type": "feature",
+        "priority": "medium"
+      }
+    ]
+  },
+  "issues": [
+    {
+      "id": "i-1",
+      "label": "web_search disabled",
+      "detail": "Gemini API key not configured; cannot perform live web search.",
+      "severity": "medium"
+    },
+    {
+      "id": "i-2",
+      "label": "Execution policy",
+      "detail": "PowerShell execution policy blocks 'openclaw' script directly.",
+      "severity": "low"
+    }
+  ],
+  "agents": [
+    {
+      "id": "a-orch-main",
+      "name": "Atlas (Orchestrator)",
+      "kind": "orchestrator",
+      "role": "Plans, routes work, keeps overview of tasks and issues.",
+      "status": "active",
+      "activity": "working",
+      "lastActivity": "Coordinated deployment of stand-up reminder and dashboard updates."
+    },
+    {
+      "id": "a-planner",
+      "name": "Planner",
+      "kind": "planner",
+      "role": "Uses a heavier reasoning model to turn big goals into detailed, prioritized task graphs.",
+      "status": "planned",
+      "activity": "idle",
+      "lastActivity": "Awaiting first planning request (e.g. PersonaPlex roadmap)."
+    },
+    {
+      "id": "a-worker-builder",
+      "name": "Builder",
+      "kind": "worker",
+      "role": "Builds and deploys small apps (web tools, dashboards, utilities).",
+      "status": "active",
+      "activity": "working",
+      "lastActivity": "Deployed gradient calculator and stand-up reminder apps."
+    },
+    {
+      "id": "a-worker-notes",
+      "name": "Notetaker",
+      "kind": "worker",
+      "role": "Maintains MEMORY.md, daily logs, and keeps the dashboard in sync.",
+      "status": "planned",
+      "activity": "idle",
+      "lastActivity": "Awaiting activation."
+    },
+    {
+      "id": "a-canary",
+      "name": "Canary",
+      "kind": "canary",
+      "role": "Gets new workflows and skills first; used to test changes safely.",
+      "status": "planned",
+      "activity": "idle",
+      "lastActivity": "Awaiting first experimental rollout."
+    },
+    {
+      "id": "a-observer",
+      "name": "Observer",
+      "kind": "observer",
+      "role": "Watches heartbeats, GitHub status, and surfaces alerts.",
+      "status": "planned",
+      "activity": "idle",
+      "lastActivity": "Awaiting heartbeat and log wiring."
+    }
+  ],
+  "apps": [
+    {
+      "id": "app-click-counter",
+      "name": "Click Counter",
+      "repo": "https://github.com/atlasclawbot97-cmyk/click-counter",
+      "url": "https://atlasclawbot97-cmyk.github.io/click-counter/"
+    },
+    {
+      "id": "app-calculator",
+      "name": "Gradient Calculator",
+      "repo": "https://github.com/atlasclawbot97-cmyk/calculator",
+      "url": "https://atlasclawbot97-cmyk.github.io/calculator/"
+    },
+    {
+      "id": "app-stand-up",
+      "name": "Stand Up Reminder",
+      "repo": "https://github.com/atlasclawbot97-cmyk/stand-up-reminder",
+      "url": "https://atlasclawbot97-cmyk.github.io/stand-up-reminder/"
+    },
+    {
+      "id": "app-dashboard",
+      "name": "Atlas Dashboard",
+      "repo": "https://github.com/atlasclawbot97-cmyk/atlas-dashboard",
+      "url": "https://atlas-dashboard-peach.vercel.app/"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "idea-1",
+      "title": "Add timeline of recent actions to the dashboard",
+      "detail": "Visual feed of what Atlas and the fleet did recently (deploys, edits, issues)."
+    },
+    {
+      "id": "idea-2",
+      "title": "Hook dashboard to real memory files",
+      "detail": "Read MEMORY.md and daily logs to auto-populate tasks and notes."
+    },
+    {
+      "id": "idea-3",
+      "title": "Separate views per agent role",
+      "detail": "Filter dashboard by orchestrator / builder / observer to see focused views."
+    }
+  ]
+}
